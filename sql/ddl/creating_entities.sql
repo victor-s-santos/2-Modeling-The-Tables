@@ -10,8 +10,8 @@ CREATE TABLE IF NOT EXISTS company(
 
 CREATE TABLE IF NOT EXISTS snack(
     id SERIAL PRIMARY KEY, 
-    name VARCHAR (100) UNIQUE NOT NULL,
-    summary TEXT NOT NULL,
+    name VARCHAR (100) NOT NULL,
+    summary TEXT,
     id_company integer not null,
     constraint fk_id_company FOREIGN KEY (id_company)
     references company (id),
@@ -19,10 +19,14 @@ CREATE TABLE IF NOT EXISTS snack(
     "updatedAt" TIMESTAMPTZ
 );
 
-CREATE TABLE IF NOT EXISTS nutricional_info(
+CREATE TABLE IF NOT EXISTS nutritional_info(
     id SERIAL PRIMARY KEY,
     snack_name VARCHAR (100), 
     id_snack integer not null,
+    company_name VARCHAR (100),
+    id_company integer not null,
+    constraint fk_id_company FOREIGN key (id_company)
+    references company (id),
     constraint fk_id_snack FOREIGN key (id_snack)
     references snack (id),
     "Calories" integer NULL,
