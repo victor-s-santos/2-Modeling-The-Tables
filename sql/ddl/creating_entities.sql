@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS company(
 CREATE TABLE IF NOT EXISTS snack(
     id SERIAL PRIMARY KEY, 
     name VARCHAR (100) NOT NULL,
+    company_name VARCHAR (100) NOT NULL,
     summary TEXT,
     id_company integer not null,
     constraint fk_id_company FOREIGN KEY (id_company)
