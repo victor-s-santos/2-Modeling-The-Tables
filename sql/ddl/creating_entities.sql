@@ -40,6 +40,6 @@ CREATE TABLE IF NOT EXISTS nutritional_info(
     "Fiber(g)" double precision NULL,
     "Sugars(g)" double precision NULL,
     "Protein(g)" double precision NULL,
-    "createdAt" TIMESTAMPTZ NULL,
+    "createdAt" TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMPTZ NULL
 );
