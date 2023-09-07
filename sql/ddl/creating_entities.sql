@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS nutritional_info(
     "Calories" integer NULL,
     "CaloriesFromFat" integer NULL,
     "TotalFat(g)" double precision NULL,
-    "SaturetedFat(g)" double precision NULL,
+    "SaturatedFat(g)" double precision NULL,
     "TransFat(g)" double precision NULL,
     "Cholesterol(mg)" integer NULL,
     "Sodium(mg)" integer NULL,
