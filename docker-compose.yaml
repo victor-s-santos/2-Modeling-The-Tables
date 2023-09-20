@@ -15,5 +15,3 @@ services:
       - ./sql/alter_table_types_every_numerical_type_column.sql:/docker-entrypoint-initdb.d/B_alter_table.sql
 volumes:
   postgres_volume:
-
-#relation "public.fast_food_nutrition_menu" does not exist
